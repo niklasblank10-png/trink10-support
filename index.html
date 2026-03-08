@@ -1,26 +1,249 @@
-10von10 Support
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10von10! – Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-Über die App
-10von10 ist das ultimative Schätzspiel für gesellige Abende mit Freunden. Spiele im Punkte-Modus kompetitiv oder aktiviere den optionalen Party-Modus für noch mehr Spaß!
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
 
-Häufige Fragen
-Wie funktioniert das Spiel?
-Jeder Spieler bekommt abwechselnd eine Schätzfrage mit einer Antwort zwischen 0-10.
-Punkte-Modus: Rate richtig und sammle Punkte – verschätzt du dich, verlierst du Punkte entsprechend deiner Abweichung.
-Party-Modus: Optional aktivierbar für gesellige Runden mit zusätzlichem Partyspaß.
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      text-align: center;
+      padding: 3rem 1.5rem 2.5rem;
+    }
 
-Wie stelle ich meine Käufe wieder her?
-Gehe zur Fragenpaket-Auswahl und tippe auf "Käufe wiederherstellen".
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
 
-Was ist im Premium-Paket enthalten?
-Das Premium-Paket enthält über 300 zusätzliche Fragen für unbegrenzten Spielspaß.
-Was ist im Fußball-Paket enthalten?
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
 
-Das Fußball-Paket enthält über 300 Fragen rund um Fußball – perfekt für alle Sportfans!
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
 
-Startbildschirm aktiviert werden.
-Kontakt
-E-Mail: niki.blank@web.de
-Bei Fragen, Problemen oder Anregungen schreib uns einfach!
+    section {
+      background: white;
+      border-radius: 14px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
 
-© 2026 10von10 | Viel Spaß beim Schätzen!
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1d1d1f;
+    }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e5e5e7;
+      padding: 0.9rem 0;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #86868b;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-q::after {
+      content: '−';
+    }
+
+    .faq-a {
+      display: none;
+      padding-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #424245;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    /* Contact form */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #424245;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      border: 1px solid #d2d2d7;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fafafa;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0071e3;
+      background: #fff;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .btn-submit {
+      display: inline-block;
+      background: #0071e3;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.8rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-submit:hover { background: #0062c4; }
+
+    .alt-contact {
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e5e7;
+      font-size: 0.88rem;
+      color: #6e6e73;
+    }
+
+    .alt-contact a {
+      color: #0071e3;
+      text-decoration: none;
+    }
+
+    .alt-contact a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.8rem;
+      color: #86868b;
+    }
+
+    footer a { color: #0071e3; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>10von10!</h1>
+  <p>Support &amp; Help Center</p>
+</header>
+
+<div class="container">
+
+  <!-- About -->
+  <section>
+    <h2>About the App</h2>
+    <p style="font-size:0.93rem; color:#424245;">
+      10von10! is a fun German party and estimation game for friends and family. Challenge each other with trivia, make your best guesses, and see who scores a perfect 10 out of 10!
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I restore my purchases?</div>
+      <div class="faq-a">Open the app, go to Settings, and tap "Restore Purchases." Make sure you're signed in with the same Apple ID you used for the original purchase.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">The app isn't playing music. What can I do?</div>
+      <div class="faq-a">10von10! uses Apple Music integration. Please make sure you have an active Apple Music subscription and that you've granted the app permission to access Apple Music in Settings → 10von10!.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is an internet connection required?</div>
+      <div class="faq-a">The core game works offline. Some features like Apple Music integration require an internet connection.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Which devices are supported?</div>
+      <div class="faq-a">10von10! requires an iPhone or iPad running iOS 17.0 or later.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I report a bug?</div>
+      <div class="faq-a">Please use the contact form below or email us directly. Include a description of the issue and your device model and iOS version — this helps us fix things faster.</div>
+    </div>
+  </section>
+
+  <!-- Contact / Support Request -->
+  <section>
+    <h2>Contact Us</h2>
+    <p style="font-size:0.9rem; color:#6e6e73; margin-bottom:1.2rem;">
+      Have a question, found a bug, or need help? Fill out the form below and we'll get back to you as soon as possible.
+    </p>
+
+    <p style="font-size:0.95rem; margin-bottom:0.8rem;">
+      <strong>Email us:</strong>
+      <a href="mailto:niki.blank@web.de" style="color:#0071e3; text-decoration:none;">niki.blank@web.de</a>
+    </p>
+    <p style="font-size:0.88rem; color:#6e6e73;">
+      Please include a description of your issue, your device model, and iOS version so we can help you as quickly as possible. You can also
+      <a href="https://github.com/niklasblank10-png/10von10-support/issues" target="_blank" rel="noopener" style="color:#0071e3; text-decoration:none;">open an issue on GitHub</a>.
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a> · © 2026 10von10!
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
