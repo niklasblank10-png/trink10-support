@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,6 @@
       color: #1d1d1f;
     }
 
-    /* FAQ */
     .faq-item {
       border-bottom: 1px solid #e5e5e7;
       padding: 0.9rem 0;
@@ -64,6 +63,171 @@
     .faq-q {
       font-weight: 600;
       font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #86868b;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-q::after {
+      content: '−';
+    }
+
+    .faq-a {
+      display: none;
+      padding-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #424245;
+    }
+
+    .faq-item.open .faq-a { display: block; }
+
+    .contact-box {
+      background: #f0f4ff;
+      border-radius: 10px;
+      padding: 1.4rem;
+      text-align: center;
+    }
+
+    .contact-box p {
+      font-size: 0.93rem;
+      color: #424245;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: #0071e3;
+      color: white;
+      text-decoration: none;
+      padding: 0.65rem 1.6rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .contact-link:hover { background: #0062c4; }
+
+    .alt-contact {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #6e6e73;
+    }
+
+    .alt-contact a {
+      color: #0071e3;
+      text-decoration: none;
+    }
+
+    .alt-contact a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.8rem;
+      color: #86868b;
+    }
+
+    footer a { color: #0071e3; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>10von10!</h1>
+  <p>Hilfe &amp; Support</p>
+</header>
+
+<div class="container">
+
+  <!-- Über die App -->
+  <section>
+    <h2>Über die App</h2>
+    <p style="font-size:0.93rem; color:#424245;">
+      10von10! ist das ultimative Schätzspiel für gesellige Abende mit Freunden und Familie. Beantworte Schätzfragen, sammle Punkte und finde heraus, wer das beste Bauchgefühl hat — schaffst du die perfekte 10 von 10?
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Häufige Fragen</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Wie funktioniert das Spiel?</div>
+      <div class="faq-a">Jeder Spieler bekommt abwechselnd eine Schätzfrage mit einer Antwort zwischen 0 und 10. Je näher deine Schätzung am richtigen Wert liegt, desto mehr Punkte bekommst du. Wer am Ende die meisten Punkte hat, gewinnt!</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Wie stelle ich meine Käufe wieder her?</div>
+      <div class="faq-a">Gehe zur Fragenpaket-Auswahl und tippe auf „Käufe wiederherstellen". Stelle sicher, dass du mit derselben Apple-ID angemeldet bist, mit der du den Kauf getätigt hast.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Welche Fragenpakete gibt es?</div>
+      <div class="faq-a">
+        <strong>Premium</strong> — Über 300 zusätzliche Fragen aus verschiedenen Kategorien für unbegrenzten Spielspaß.<br><br>
+        <strong>Fußball</strong> — Über 300 Schätzfragen rund um Fußball — perfekt für alle Sportfans!<br><br>
+        <strong>TV</strong> — Fragen zu Serien, Shows und allem rund ums Fernsehen.<br><br>
+        <strong>Geschichte</strong> — Teste dein Wissen über historische Ereignisse und Jahreszahlen.<br><br>
+        <strong>Musik</strong> — Von Charts bis Klassik — wie gut kennst du die Welt der Musik?<br><br>
+        <strong>Länder</strong> — Geografie, Hauptstädte, Einwohnerzahlen und mehr aus aller Welt.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Brauche ich eine Internetverbindung?</div>
+      <div class="faq-a">Nein, 10von10! funktioniert komplett offline. Du kannst jederzeit und überall spielen.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Auf welchen Geräten läuft die App?</div>
+      <div class="faq-a">10von10! läuft auf iPhones und iPads mit iOS 17.0 oder neuer.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Ich habe einen Fehler gefunden. Was soll ich tun?</div>
+      <div class="faq-a">Schreib uns einfach eine E-Mail (siehe unten). Beschreibe bitte kurz das Problem und nenne dein Gerät und deine iOS-Version — das hilft uns, den Fehler schneller zu beheben.</div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section>
+    <h2>Kontakt &amp; Support</h2>
+    <div class="contact-box">
+      <p>Hast du eine Frage, ein Problem oder einen Vorschlag?<br>Wir helfen dir gerne weiter!</p>
+      <a href="mailto:niki.blank@web.de?subject=10von10!%20Support" class="contact-link">E-Mail schreiben</a>
+      <div class="alt-contact">
+        Oder erstelle ein <a href="https://github.com/niklasblank10-png/10von10-support/issues" target="_blank" rel="noopener">Issue auf GitHub</a>.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <a href="privacy.html">Datenschutz</a> · © 2026 10von10!
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>      font-size: 0.95rem;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
